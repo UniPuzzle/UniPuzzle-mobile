@@ -1,0 +1,901 @@
+:root {
+  --main-text-color: #19385d;
+  --bgc-header-menu: #3a6fc9;
+  --secondary-text-color: #ffffff;
+  --title-color: #0c3e96;
+  --bcg-color: #ebf3ff;
+  --white-bgc: #ffffff;
+  --item-block-bgc: #648dd4;
+  --bgc-date: #dd2a1b;
+  --bgc-hero-card: #f53323;
+  --bcg-color-footer: #19385d;
+
+  --transition: 250ms;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.12;
+  color: var(--main-text-color);
+  background-color: var(--white-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.link:hover,
+.link:focus {
+  cursor: pointer;
+  font-weight: 800;
+
+  transition: var(--transition);
+}
+
+.list {
+  list-style: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 390px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.header .container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.section {
+  padding-top: 83px;
+}
+.section-master {
+  padding-top: 29px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--title-color);
+  text-transform: uppercase;
+}
+
+.wrapper-date {
+  /* width: 65px; */
+  border-radius: 4px;
+  background-color: var(--bgc-date);
+  margin-left: auto;
+}
+
+.wrapper-date__hero {
+  border-left: 1px solid #ffffff;
+  background-color: transparent;
+  transform: skewX(-10deg);
+}
+
+/* Header */
+.header-logo {
+  width: 167px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.header .menu {
+  display: flex;
+  background-color: var(--bgc-header-menu);
+  height: 74px;
+  margin-left: 89px;
+  align-items: center;
+  justify-content: center;
+}
+.navigation::before {
+  content: '';
+  background-image: url(../images/svg/pyzzle.svg);
+  width: 200px;
+  height: 74px;
+  position: absolute;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  /* width: 140px; */
+}
+.menu-link {
+  display: flex;
+  align-items: center;
+}
+.menu-link:hover {
+  transition: var(--transition);
+}
+
+.navigation-logo::before {
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 55px;
+  height: 45px;
+  margin-right: 11px;
+  transition: var(--transition);
+}
+.logicrgb::before {
+  background-image: url(../images/sec-hero/svg/logichero.svg);
+}
+
+.logicrgb:hover::before,
+.logicrgb:focus::before {
+  background-image: url(../images/sec-hero/svg/logicrgb.svg);
+}
+
+.coinrgb::before {
+  background-image: url(../images/sec-hero/svg/coinhero.svg);
+}
+
+.coinrgb:hover::before,
+.coinrgb:focus::before {
+  background-image: url(../images/sec-hero/svg/coinrgb.svg);
+  cursor: pointer;
+  outline: none;
+}
+
+.chessrgb::before {
+  background-image: url(../images/sec-hero/svg/chesshero.svg);
+}
+
+.chessrgb:hover::before,
+.chessrgb:focus::before {
+  background-image: url(../images/sec-hero/svg/chessrgb.svg);
+  cursor: pointer;
+  outline: none;
+}
+.classicsrgb::before {
+  background-image: url(../images/sec-hero/svg/classicshero.svg);
+}
+
+.classicsrgb:hover::before,
+.classicsrgb:focus::before {
+  background-image: url(../images/sec-hero/svg/classicsrgb.svg);
+  cursor: pointer;
+  outline: none;
+}
+.holidayrgb::before {
+  background-image: url(../images/sec-hero/svg/holidayhero.svg);
+}
+
+.holidayrgb:hover::before,
+.holidayrgb:focus::before {
+  background-image: url(../images/sec-hero/svg/holidayrgb.svg);
+  cursor: pointer;
+  outline: none;
+}
+
+.navigation .menu-item:not(:last-child)::after {
+  content: '';
+  background-image: url(../images/svg/svg/slash.svg);
+  width: 9px;
+  height: 23px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header .menu-item:last-child {
+  margin-right: 0px;
+}
+
+.header .menu-item {
+  font-size: 12px;
+  line-height: 1.08;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+
+  display: flex;
+  width: 147px;
+  align-items: center;
+  margin-right: 43px;
+}
+
+/* section-master */
+
+.section-master .main-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.bcg {
+  background-color: var(--bcg-color);
+  border-radius: 12px;
+}
+
+.main-list {
+  padding-bottom: 36px;
+}
+
+.main-item {
+  padding-top: 30px;
+}
+
+/* .main-item:hover,
+.main-item:focus {
+  transform: scale(1.03);
+  transition: var(--transition);
+} */
+
+.main-item__master {
+  /* width: 440px; */
+  background-color: var(--white-bgc);
+  /* padding-left: 35px; */
+  border-radius: 0px 0px 15px 15px;
+}
+
+.main-img {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.main-item__block {
+  /* width: 440px; */
+  background-color: var(--bgc-hero-card);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 29px;
+}
+
+.item-title {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 0.57;
+
+  color: var(--secondary-text-color);
+}
+
+.item-title .modification {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 0.65;
+  margin-left: 3px;
+}
+
+.item-title__hero::before {
+  display: block;
+  content: '';
+  height: 22px;
+  width: 22px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.icon-coin::before {
+  background-image: url(../images/svg/svg/coinpuzzles.svg);
+}
+
+.icon-quizzes::before {
+  background-image: url(../images/svg/svg/puzzlequizzes.svg);
+}
+.icon-logic::before {
+  background-image: url(../images/svg/svg/logicproblems.svg);
+}
+.item-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--secondary-text-color);
+}
+
+.wrapper-date > .item-text {
+  padding: 6px 12px;
+  text-align: center;
+  /* transform: skewX(10deg); */
+}
+
+.item-text .decoration-text {
+  font-weight: 700;
+  font-size: 18px;
+  display: block;
+}
+
+.item-text .main-item__master {
+  width: 440px;
+  background-color: var(--white-bgc);
+  /* padding-left: 35px; */
+  border-radius: 0px 0px 15px 15px;
+}
+
+.main-item__title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.1;
+  padding: 17px 0px 14px 29px;
+  text-transform: uppercase;
+}
+
+.main-item__title.position {
+  padding: 22px 36px 31px 46px;
+}
+
+.main-item__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.12;
+  color: var(--main-text-color);
+  padding: 0px 27px 34px 46px;
+}
+
+.main-item__text.current {
+  padding-right: 10px;
+}
+
+/* section PUZZLE CLASSICS  */
+/* .section-title {
+  margin-bottom: 359px;
+  display: flex;
+  align-items: center;
+} */
+
+.pzlclassic .section-title::before {
+  content: '';
+  display: block;
+  margin-right: 13px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo-classicsrgb::before {
+  width: 31px;
+  height: 43px;
+  background-image: url(../images/svg/svg/puzzleclassicsrgb.svg);
+}
+
+.logo-chesspuzzgrin::before {
+  width: 32px;
+  height: 43px;
+  background-image: url(../images/svg/svg/chesspuzzgrin.svg);
+}
+
+.logo-coinrgb::before {
+  width: 39px;
+  height: 43px;
+  background-image: url(../images/svg/svg/coinpuzzlesrgb.svg);
+}
+.logo-logicrgb::before {
+  width: 43px;
+  height: 43px;
+  background-image: url(../images/svg/svg/logicrgb.svg);
+}
+
+/* .section-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+} */
+.section-item {
+  position: relative;
+}
+/* .classic .section-item {
+  position: relative;
+  
+  width: calc((100%-54px) / 3);
+  margin-bottom: 400px;
+} */
+/* .section-item:nth-child(3n) {
+  margin-right: 0;
+} */
+/* .classic .section-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+} */
+
+/* section chess */
+
+.chess .section-item__block {
+  left: 30px;
+}
+.section-item__block {
+  width: 335px;
+
+  background-color: var(--item-block-bgc);
+  display: flex;
+  align-items: center;
+
+  border-radius: 4px;
+  transform: skewX(-10deg);
+  position: absolute;
+  z-index: 2;
+  top: -40px;
+  left: 32px;
+  padding-left: 27px;
+}
+
+.chess .item-title {
+  align-items: baseline;
+  padding-top: 9px;
+  padding-bottom: 4px;
+}
+.chess .item-title:not(:first-child) {
+  padding-left: 10px;
+}
+
+/* .section-item__block.item-title {
+  padding-left: 35px;
+} */
+
+.section-item__master {
+  margin-left: auto;
+  margin-right: auto;
+  width: 335px;
+  /* margin-bottom: 270px; */
+  background-color: var(--bcg-color);
+
+  border-radius: 0px 0px 15px 15px;
+  transform: skewX(-10deg);
+}
+.classic .section-item {
+  margin-bottom: 270px;
+}
+.classic .section-item:last-child {
+  margin-bottom: 0px;
+}
+.chess .section-item:last-child {
+  margin-bottom: 0px;
+}
+.transformation {
+  transform: skewX(10deg);
+}
+
+/* section PUZZLE CLASSICS */
+.wrap-img {
+  position: absolute;
+}
+.classic .wrap-img {
+  transform: translate(37%, -107%);
+  width: 220px;
+}
+.chess .wrap-img {
+  transform: translate(23%, -88%);
+  width: 271px;
+}
+.chess .section-item {
+  margin-bottom: 303px;
+}
+
+/* .section-item__master .main-item__text {
+  padding-left: 53px;
+} */
+
+/* .wrapper-drop {
+  display: flex;
+  justify-content: space-between;
+} */
+.arrow-down {
+  position: absolute;
+  transform: translateY(49px);
+  padding-left: 337px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  pointer-events: none;
+}
+.arrow-down::before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/svg/arrowdown.svg);
+}
+.drop {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 293px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+}
+.chess .drop {
+  margin-bottom: 369px;
+}
+.drop-style {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  color: var(--item-block-bgc);
+  cursor: pointer;
+  border: 0.5px solid var(--item-block-bgc);
+  border-radius: 4px;
+}
+
+/* section COIN PUZZLES */
+.coin-section .item-title {
+  padding-top: 16px;
+  padding-bottom: 25px;
+  padding-left: 0;
+}
+
+.coin-img {
+  position: absolute;
+  top: 50%;
+  transform: translate(35%, -50%);
+  margin-left: 45px;
+}
+.coin-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.05;
+
+  color: var(--secondary-text-color);
+}
+.coin .item-title {
+  align-items: baseline;
+}
+
+.coin-text {
+  display: flex;
+}
+.coin-section .section-title {
+  margin-bottom: 86px;
+}
+.coin .item-title:not(:first-child) {
+  padding-left: 15px;
+}
+
+.coin-wrap {
+  width: 1440px;
+  background-color: var(--main-text-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+.coin-wrap .main-item__text {
+  color: var(--secondary-text-color);
+  padding: 0;
+  width: 291px;
+  margin-bottom: 51px;
+}
+.wrapper-img {
+  position: relative;
+
+  margin-top: 43px;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.coin-item:not(:last-child)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: url(../images/svg/line-coin.svg);
+  width: 90px;
+  height: 511px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 348px;
+}
+.coin-item:first-of-type {
+  margin-left: -33px;
+}
+
+.coin-img:not(:last-child) {
+  margin-left: 25px;
+}
+.coin-img.eurotodollar {
+  margin-left: 94px;
+}
+.coin-img.coincup {
+  margin-left: 108px;
+}
+
+.coin-img.triangles {
+  margin-left: 27px;
+}
+
+.flex-item {
+  margin-left: 70px;
+}
+
+.coin-title-svg::after {
+  content: '';
+  width: 36px;
+  background-image: url(../images/sec-coin/svg/cointitlesvg.svg);
+  height: 21px;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* margin-bottom: -21px; */
+  background-size: contain;
+}
+.another-svg::after {
+  width: 22px;
+  height: 22px;
+  background-image: url(../images/sec-coin/svg/cointraingles.svg);
+}
+
+.coin .wrapper-date {
+  transform: skewX(-10deg);
+  border-radius: 4px 0px 0px 4px;
+}
+.coin-date {
+  position: absolute;
+  transform: translate(0, -100%);
+  margin-left: 217px;
+}
+
+/* section LOGIC PROBLEMS */
+
+.logic .section-title {
+  margin-bottom: 25px;
+}
+
+.logic-img {
+  width: 360px;
+}
+
+.section-list .logic-item__block {
+  /* width: 647px; */
+  height: 42px;
+  /* transform: skewX(0deg); */
+  border-radius: 0px 0px 4px 4px;
+  top: -40px;
+  left: 0px;
+  background-color: var(--item-block-bgc);
+  display: flex;
+  align-items: center;
+}
+.section-item .item-title {
+  align-items: baseline;
+  padding-bottom: 14px;
+  padding-top: 14px;
+}
+
+.logic .wrapper-date {
+  width: 64px;
+  margin-left: auto;
+  /* transform: skewX(-10deg); */
+  border-radius: 4px 0px 4px 4px;
+}
+.logic .drop {
+  margin-bottom: 37px;
+  margin-top: 0px;
+}
+
+.logic .section-img {
+  border-radius: 10px 10px 0px 0px;
+}
+/* .section-item .main-item__title-reverse {
+  padding: 0px 0px 20px 20px;
+} */
+.logic-item.item-title:not(:first-child) {
+  align-items: baseline;
+  padding-left: 20px;
+}
+/* .section-item .main-item__text {
+  padding: 0px 0px 23px 20px;
+} */
+/* .logic .section-item {
+  width: 550px;
+} */
+/* .logic .section-item:not(:last-child) {
+  margin-right: 161px;
+} */
+.logic > .logic-title {
+  padding-right: 15px;
+}
+
+/* ==================== */
+
+/* .logic-revers .section-title {
+  margin-bottom: 84px;
+} */
+
+.logic .section-list {
+  justify-content: flex-start;
+}
+/* .section-list .logic-item__block-reverse {
+  width: 647px;
+  height: 42px;
+  transform: skewX(0deg);
+  border-radius: 40px 4px 0px 0px;
+  padding-left: 0px;
+  top: -40px;
+  left: 0px;
+  background-color: var(--item-block-bgc);
+  display: flex;
+  align-items: center;
+} */
+
+/* .logic-revers .item-title {
+  padding-left: 20px;
+} */
+.logic-title {
+  padding-left: 30px;
+}
+/* .logic-revers .wrapper-date {
+  width: 73px;
+  margin-left: 2px;
+  margin-right: auto;
+  transform: skewX(-10deg);
+  border-radius: 4px 4px 4px 0px;
+} */
+
+/* .section-item .section-img__revers {
+  border-radius: 0px 0px 10px 10px;
+} */
+.logic .section-item {
+  margin-bottom: 60px;
+}
+.logic .section-item:last-child {
+  margin-bottom: 0px;
+}
+.logic .main-item__title {
+  padding: 17px 0px 15px 30px;
+}
+
+/* .logic .main-item__title-reverse {
+  padding: 0px 0px 20px 20px;
+  padding-left: 20px;
+  padding-bottom: 23px;
+  padding-top: 0px;
+} */
+
+.logic .main-item__text {
+  padding: 0px 15px 0px 30px;
+}
+
+.logic .arrow-down {
+  transform: translateY(17px);
+}
+
+.reverse .main-item__text {
+  padding: 0px 0px 23px 20px;
+}
+/* .logic-revers .section-item {
+  width: 550px;
+} */
+
+/* footer */
+.footer {
+  margin-top: 94px;
+}
+.footer.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.background-footer {
+  background-color: var(--bcg-color-footer);
+}
+/* .background-img {
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(../images/sec-footer/backgr-footer.png);
+} */
+
+.footer-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.08;
+  color: var(--secondary-text-color);
+}
+.footer-wrapper {
+  display: flex;
+  padding: 55px 35px 50px 35px;
+  justify-content: space-between;
+}
+.footer-logo {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-img {
+  width: 140px;
+  margin-bottom: 132px;
+}
+.text__copyright {
+  font-size: 10px;
+}
+
+.footer-contacts {
+  /* margin-left: 280px;
+
+  margin-top: 130px; */
+}
+.footer-link {
+  display: flex;
+  align-items: center;
+}
+.footer-item:not(:last-child) {
+  padding-bottom: 15px;
+}
+.logo-link::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: var(--transition);
+}
+
+.logic::before {
+  background-image: url(../images/sec-footer/svg/logic-footer.svg);
+}
+
+.coin::before {
+  background-image: url(../images/sec-footer/svg/coin-footer.svg);
+}
+
+.chess::before {
+  background-image: url(../images/sec-footer/svg/chess-footer.svg);
+}
+
+.classics::before {
+  background-image: url(../images/sec-footer/svg/classics-footer.svg);
+}
+
+.holiday::before {
+  background-image: url(../images/sec-footer/svg/holiday-footer.svg);
+}
+
+.footer-list {
+  display: flex;
+  padding: 55px 35px 50px 35px;
+  justify-content: space-between;
+}
+
+.footer-text__contact {
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.08px;
+  /* margin-bottom: 130px; */
+}
+.footer-text__policy {
+  font-weight: 400;
+  font-size: 10px;
+}
