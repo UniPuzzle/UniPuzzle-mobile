@@ -462,7 +462,7 @@ img {
 }
 .section-item__block {
   width: 335px;
-
+  height: 42px;
   background-color: var(--item-block-bgc);
   display: flex;
   align-items: center;
@@ -705,7 +705,7 @@ img {
 
 .section-list .logic-item__block {
   /* width: 647px; */
-  height: 42px;
+  height: 41px;
   /* transform: skewX(0deg); */
   border-radius: 0px 0px 4px 4px;
   top: -40px;
@@ -716,8 +716,8 @@ img {
 }
 .section-item .item-title {
   align-items: baseline;
-  padding-bottom: 14px;
-  padding-top: 14px;
+  /* padding-bottom: 14px;
+  padding-top: 14px; */
 }
 
 .logic .wrapper-date {
@@ -734,7 +734,7 @@ img {
   position: relative;
   /* Оригинальные размеры */
   width: 64px; /* 710px */
-  height: 42px; /* 351px */
+  height: 41px; /* 351px */
   margin-left: auto;
 }
 .skew::before,
