@@ -116,21 +116,32 @@ img {
   padding-bottom: 10px;
 }
 
-.header .menu {
+/* .header .menu {
+} */
+.navigation {
+  background-color: var(--bcg-color);
+  /* margin-left: -10px;
+  margin-top: -10px; */
+}
+.navigation .menu {
   display: flex;
-  background-color: var(--bgc-header-menu);
-  height: 74px;
-  margin-left: 89px;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* margin-left: 89px;  */
   align-items: center;
   justify-content: center;
+  margin-right: -10px;
+  margin-bottom: -10px;
+  /* width: calc(100% / 3 - 10px); */
 }
-.navigation::before {
+/* .navigation::before {
   content: '';
   background-image: url(../images/svg/pyzzle.svg);
   width: 200px;
   height: 74px;
   position: absolute;
-}
+} */
 
 .menu-item {
   display: flex;
@@ -139,98 +150,112 @@ img {
 }
 .menu-link {
   display: flex;
+  flex-wrap: wrap;
+  width: 113px;
+  height: 107px;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 27px;
+  padding-right: 27px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.menu-link:hover {
+/* .menu-link:hover {
   transition: var(--transition);
-}
+} */
 
 .navigation-logo::before {
   content: '';
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  width: 55px;
-  height: 45px;
-  margin-right: 11px;
-  transition: var(--transition);
+  width: 35px;
+  height: 40px;
 }
 .logicrgb::before {
   background-image: url(../images/sec-hero/svg/logichero.svg);
 }
 
-.logicrgb:hover::before,
+/* .logicrgb:hover::before,
 .logicrgb:focus::before {
   background-image: url(../images/sec-hero/svg/logicrgb.svg);
-}
+} */
 
 .coinrgb::before {
   background-image: url(../images/sec-hero/svg/coinhero.svg);
 }
 
-.coinrgb:hover::before,
+/* .coinrgb:hover::before,
 .coinrgb:focus::before {
   background-image: url(../images/sec-hero/svg/coinrgb.svg);
   cursor: pointer;
   outline: none;
-}
+} */
 
 .chessrgb::before {
   background-image: url(../images/sec-hero/svg/chesshero.svg);
 }
 
-.chessrgb:hover::before,
+/* .chessrgb:hover::before,
 .chessrgb:focus::before {
   background-image: url(../images/sec-hero/svg/chessrgb.svg);
   cursor: pointer;
   outline: none;
-}
+} */
 .classicsrgb::before {
   background-image: url(../images/sec-hero/svg/classicshero.svg);
 }
 
-.classicsrgb:hover::before,
+/* .classicsrgb:hover::before,
 .classicsrgb:focus::before {
   background-image: url(../images/sec-hero/svg/classicsrgb.svg);
   cursor: pointer;
   outline: none;
-}
+} */
 .holidayrgb::before {
   background-image: url(../images/sec-hero/svg/holidayhero.svg);
 }
 
-.holidayrgb:hover::before,
+/* .holidayrgb:hover::before,
 .holidayrgb:focus::before {
   background-image: url(../images/sec-hero/svg/holidayrgb.svg);
   cursor: pointer;
   outline: none;
-}
+} */
 
-.navigation .menu-item:not(:last-child)::after {
+/* .navigation .menu-item:not(:last-child)::after {
   content: '';
   background-image: url(../images/svg/svg/slash.svg);
   width: 9px;
   height: 23px;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
-.header .menu-item:last-child {
+/* .header .menu-item:last-child {
   margin-right: 0px;
-}
+} */
 
 .header .menu-item {
-  font-size: 12px;
-  line-height: 1.08;
-  font-weight: 400;
-  color: var(--secondary-text-color);
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 800;
   text-transform: uppercase;
-
-  display: flex;
-  width: 147px;
-  align-items: center;
-  margin-right: 43px;
+  /* display: flex; */
+  /* width: 113px; */
+  /* align-items: center; */
+  margin-right: 10px;
+  margin-bottom: 10px;
+  /* height: 107px; */
+  background-color: var(--white-bgc);
+  border-radius: 12px;
 }
+/* .header .menu-item:nth-last-child(-n + 3) {
+  margin-right: 0px;
+  margin-bottom: 0px;
+} */
 
 /* section-master */
 
@@ -326,7 +351,7 @@ img {
 .wrapper-date > .item-text {
   padding: 6px 12px;
   text-align: center;
-  /* transform: skewX(10deg); */
+  transform: skewX(10deg);
 }
 
 .item-text .decoration-text {
@@ -361,7 +386,9 @@ img {
   color: var(--main-text-color);
   padding: 0px 27px 34px 46px;
 }
-
+.section-master .main-item__text {
+  padding-left: 29px;
+}
 .main-item__text.current {
   padding-right: 10px;
 }
@@ -848,6 +875,7 @@ img {
 .footer-link {
   display: flex;
   align-items: center;
+  width: 120px;
 }
 .footer-item:not(:last-child) {
   padding-bottom: 15px;
