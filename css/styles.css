@@ -351,7 +351,7 @@ img {
 .wrapper-date > .item-text {
   padding: 6px 12px;
   text-align: center;
-  transform: skewX(10deg);
+  /* transform: skewX(10deg); */
 }
 
 .item-text .decoration-text {
@@ -722,10 +722,46 @@ img {
 
 .logic .wrapper-date {
   width: 64px;
-  margin-left: auto;
-  /* transform: skewX(-10deg); */
+  position: absolute;
+  /* transform: skewX(10deg); */
+  transform: translate(294px, 0px);
+  border-radius: 4px;
   border-radius: 4px 0px 4px 4px;
+  background-color: transparent;
 }
+
+.skew {
+  position: relative;
+  /* Оригинальные размеры */
+  width: 64px; /* 710px */
+  height: 42px; /* 351px */
+  margin-left: auto;
+}
+.skew::before,
+.skew::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  box-sizing: border-box;
+  /* border-left: 1px solid var(--secondary-text-color); */
+  background-color: var(--bgc-date);
+}
+
+.skew::before {
+  left: 2px;
+  border-bottom: transparent;
+  /* border-right: none; */
+  border-radius: 4px 0px 0px 4px;
+  transform-origin: top left;
+  transform: skewx(-10deg);
+}
+.skew::after {
+  right: 0px;
+  /* border: none; */
+  border-radius: 0px 0 4px 0px;
+}
+
 .logic .drop {
   margin-bottom: 37px;
   margin-top: 0px;
