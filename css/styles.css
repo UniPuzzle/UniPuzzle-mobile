@@ -47,10 +47,10 @@ img {
   text-decoration: none;
   color: inherit;
 }
-.link:hover,
+/* .link:hover,
 .link:focus {
   cursor: pointer;
-}
+} */
 
 .list {
   list-style: none;
@@ -104,8 +104,7 @@ img {
 
 /* Header */
 .header-logo {
-  width: 167px;
-
+  width: 233px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 12px;
