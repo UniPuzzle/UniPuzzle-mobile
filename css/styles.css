@@ -516,6 +516,12 @@ img {
   margin-right: 5px;
 }
 
+.coin-text-group.modific {
+  height: 33px;
+  display: flex;
+  align-items: end;
+}
+
 .coin .item-title {
   margin-top: 3px;
 }
