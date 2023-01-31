@@ -54,6 +54,14 @@ img {
   text-decoration: none;
   color: inherit;
 }
+.container {
+  width: 390px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .link:hover,
 .link:focus {
   cursor: pointer;
@@ -68,19 +76,11 @@ img {
   padding: 0;
 }
 
-.container {
-  width: 1440px;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 /* ==================================
                  dropdown */
 
 .form-group {
-  padding: 150px;
+  padding-top: 150px;
 }
 .dropdown {
   position: relative;

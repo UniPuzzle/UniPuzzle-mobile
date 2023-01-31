@@ -1,12 +1,12 @@
 // Поліфіл для методу forEach для NodeList
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = function (callback, thisArg) {
-    thisArg = thisArg || window;
-    for (var i = 0; i < this.length; i++) {
-      callback.call(thisArg, this[i], i, this);
-    }
-  };
-}
+// if (window.NodeList && !NodeList.prototype.forEach) {
+//   NodeList.prototype.forEach = function (callback, thisArg) {
+//     thisArg = thisArg || window;
+//     for (var i = 0; i < this.length; i++) {
+//       callback.call(thisArg, this[i], i, this);
+//     }
+//   };
+// }
 
 document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
@@ -19,7 +19,7 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   );
 
   // Клік по кнопці. Відкрити/Закрити select
-  dropDownBtn.addEventListener('click', function (e) {
+  dropDownBtn.addEventListener('touchstart', function (e) {
     dropDownList.classList.toggle('dropdown__list--visible');
     dropDownBtn.classList.toggle('dropdown__button-up');
     this.classList.add('dropdown__button--active');
@@ -27,7 +27,7 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 
   //Вибір елемента списку. Запам'ятати вибране значення. Закрити дропдаун
   dropDownListItems.forEach(function (listItem) {
-    listItem.addEventListener('click', function (e) {
+    listItem.addEventListener('touchstart', function (e) {
       e.stopPropagation();
       dropDownBtn.innerText = this.innerText;
       dropDownBtn.focus();
@@ -38,17 +38,8 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   });
 
   //Клік зовні дропдауну. Закрити дропдаун
-  document.addEventListener('click', function (e) {
+  document.addEventListener('touchstart', function (e) {
     if (e.target !== dropDownBtn) {
-      dropDownBtn.classList.remove('dropdown__button--active');
-      dropDownList.classList.remove('dropdown__list--visible');
-      dropDownBtn.classList.remove('dropdown__button-up');
-    }
-  });
-
-  // Натискання на Tab або Escape. Закрити дропдаун
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Tab' || e.key === 'Escape') {
       dropDownBtn.classList.remove('dropdown__button--active');
       dropDownList.classList.remove('dropdown__list--visible');
       dropDownBtn.classList.remove('dropdown__button-up');
