@@ -211,11 +211,11 @@ img {
   background-color: var(--white-bgc);
   border: 0.5px solid var(--item-block-bgc);
   border-radius: 4px;
-  height: 32px;
+  height: 42px;
   color: var(--item-block-bgc);
 
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 25px;
 
@@ -259,7 +259,7 @@ img {
   position: absolute;
   left: 0;
   right: 0;
-  top: 32px;
+  top: 42px;
 
   margin: 0 auto;
   padding: 0;
@@ -291,8 +291,8 @@ img {
 
   border-bottom: 0px;
   border-top: 0;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 10px;
   cursor: pointer;
 }
@@ -445,23 +445,27 @@ img {
 }
 
 .logo-classicsrgb::before {
+  margin-left: 5px;
   width: 31px;
   height: 43px;
   background-image: url(../images/svg/svg/puzzleclassicsrgb.svg);
 }
 
 .logo-chesspuzzgrin::before {
+  margin-left: 5px;
   width: 32px;
   height: 43px;
   background-image: url(../images/svg/svg/chesspuzzgrin.svg);
 }
 
 .logo-coinrgb::before {
+  margin-left: 5px;
   width: 39px;
   height: 43px;
   background-image: url(../images/svg/svg/coinpuzzlesrgb.svg);
 }
 .logo-logicrgb::before {
+  margin-left: 5px;
   width: 43px;
   height: 43px;
   background-image: url(../images/svg/svg/logicrgb.svg);
